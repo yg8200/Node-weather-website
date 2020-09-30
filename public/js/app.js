@@ -14,7 +14,7 @@ wearherForm.addEventListener('submit', (e) => {
     message_One.textContent = 'Loading'
     message_Two.textContent = ''
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             message_One.textContent = 'error - something went wrong, search again'
